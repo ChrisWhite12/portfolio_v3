@@ -1,0 +1,213 @@
+/*
+navbar
+header
+Projects
+Skills
+About
+Contact
+*/
+
+@import "variables";
+*{ 
+    margin: 0;
+    padding: 0;
+    /* border: black 1px dashed; */
+    box-sizing: border-box;
+    color: $main_text_color;
+    font-family: sans-serif;
+}
+
+@import "home";
+@import "projects";
+@import "about";
+
+body{
+    background-color: $back_color1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+// large screen
+@media only screen and (min-width: 600px){
+    .project_item{
+        grid-template-columns: 30vw 1fr;
+        grid-template-rows: 1fr;
+        height: 200px;
+    }
+    .project_description{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        width: 60vw;
+    }
+    .blog_info{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .blog_post_item{
+        grid-template-columns: 30vw 1fr;
+        grid-template-rows: 1fr;
+        height: 200px;
+    }
+    .skills_icons{
+        width: 60vw;
+        img{
+            width: 50px;
+        }
+    }
+    .project_links{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+// small screen
+@media only screen and (max-width: 600px){  
+    .project_item{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 1fr;
+    }
+    .project_description{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: 80vw;
+    }
+    .blog_info{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .blog_post_item{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 1fr;
+    }
+    .skills_icons{
+        width: 90vw;
+        img{
+            width: 25px;
+        }
+    }
+    .project_links{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* -------------------------NAVBAR-------------------------- */
+nav{
+    display: flex;
+    height: 10vh;
+    background-color: $back_color1;
+    /* border: 1px solid black; */
+    .navbar{
+        display: flex;
+        width: 100vw;
+        /* border: 2px solid purple; */
+        justify-content: space-around;
+        list-style-type: none;
+        align-items: center;
+        li{
+            padding: 10px;
+            margin: 20px;
+            &:hover{
+                background-color: $back_color2;
+                box-shadow: inset 0 0 5px black;
+            }
+        }
+        .menu_nav{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+/* ------------------------------------FOOTER---------------------------------- */
+footer{
+    height: 10vh;
+    display: flex;
+    background-color: $back_color1;
+    justify-content: space-around;
+    align-items: center;
+    .logobar li{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 0px 30px;
+        padding: 15px;
+        width: 20px;
+        height: 20px;
+        &:hover{
+            background-color: $back_color2;
+            box-shadow: inset 0 0 5px black;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+       }
+    }
+}
+/* ---------------------------------MAIN SEC---------------------------------- */
+.main_sec{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    align-items: center;
+    padding: 10px
+    /* border: red 2px solid; */
+}
+.page_title{
+    align-self: center;
+    margin: 30px 0;
+}
+p{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+h2{
+    margin: 10px;
+}
+/* http://placekitten.com/200/200 */
+
+// ------------------------------------------------DROP DOWN MENU------------------------------------------
+.main_menu{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    z-index: 1;
+    .drop_menu_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        border: 2px solid black;
+        background-color: $back_color1;  
+        width: 100vw;      
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            text-align: center;
+        }
+    }
+}
+
+// -------------------------------------------------- Video Modal ---------------------------------------
+
+.videoModal{
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+}
+.videoClose{
+    width: 50px;
+    height: 50px;
+    background-color: $back_color1;
+}
+.embVideo{
+    margin: 10px;
+}
