@@ -36,9 +36,10 @@ const Projects = () => {
         "project4": {
             "img": "./project_img/App_dash.jpg",
             "title": "Client Portal",
-            "desc": "Client portal App for the MERN assessment. The MVP for the portal is that clients will be able to see their upcoming appointments, submit ticket requests to administration to change their appointments, view and edit their personal details. The website isn’t active, the test database was paid monthly and not being used at the moment.",
+            "desc": "Client portal App for the MERN assessment. The MVP for the portal is that clients will be able to see their upcoming appointments, submit ticket requests to administration to change their appointments, view and edit their personal details. Cliniko requires a monthly fee, therefore the live site is not active. However the video link provides a demonstration.",
             "github": "https://github.com/ChrisWhite12/clientPortalApp_BE",
-            "skills": ["mongo", "react","js", "html", "css"]
+            "skills": ["mongo", "react","js", "html", "css"],
+            "video": "https://www.youtube.com/embed/LFAF-WmQIvA"
         },
         "project5": {
             "title": "Internship",
