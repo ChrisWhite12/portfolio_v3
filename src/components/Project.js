@@ -20,7 +20,9 @@ const Project = (props) => {
 
     return (
         <div className="project_item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {props.data["img"] ? <img src={props.data["img"]} alt="Project" className="project_img"></img> : <p>No image</p>}
+            {/* <div className='imgCont'> */}
+                {props.data["img"] ? <img src={props.data["img"]} alt="Project" className="project_img"></img> : <p>No image</p>}
+            {/* </div> */}
             <div className="project_description">
                 <h2 className="project_title">{props.data["title"]}</h2>
                 <p className="project_text">{props.data["desc"]}</p>
