@@ -89,7 +89,7 @@ const Projects = () => {
                     </div>:
                     <div className="project_list">
                         <Project data={data["project6"]} handleVideoClick={handleVideoClick}/>
-                        <Project data={data["project4"]} />
+                        <Project data={data["project4"]} handleVideoClick={handleVideoClick}/>
                         <Project data={data["project5"]} />
                         <Project data={data["project2"]} />
                         <Project data={data["project1"]} />
