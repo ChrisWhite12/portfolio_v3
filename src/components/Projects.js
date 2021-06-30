@@ -8,6 +8,7 @@ import VideoModal from './VideoModal';
 
 const Projects = () => {
     const [modalOn, setModalOn] = useState(false)
+    const [videoLink, setVideoLink] = useState('')
 
     const data = {
         "project1":{
@@ -48,7 +49,7 @@ const Projects = () => {
             "img": "./project_img/Dingo.jpg"
         },
         "project6": {
-            "title": "Habit Tracker",
+            "title": "Habit Squares",
             "desc": "React Native app that uses firebase and redux to store habit information and display it on a calendar with authentication handled by Firebase's Google Signin. Expo Go has to be installed to view the live site",
             'skills': ['react', 'js', 'css', 'redux'],
             "img": "./project_img/reactNative2.png",
@@ -62,6 +63,7 @@ const Projects = () => {
     const handleVideoClick = (data) => {
         setModalOn(true)
         console.log('data',data);
+        setVideoLink(data)
     }
 
     const handleVideoCancel = () => {
@@ -85,7 +87,7 @@ const Projects = () => {
                 {
                     modalOn ?
                     <div>
-                        <VideoModal handleVideoCancel={handleVideoCancel} link={"https://www.youtube.com/embed/1u6hRNbXxNE"}/>
+                        <VideoModal handleVideoCancel={handleVideoCancel} link={videoLink}/>
                     </div>:
                     <div className="project_list">
                         <Project data={data["project6"]} handleVideoClick={handleVideoClick}/>
