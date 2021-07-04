@@ -33,7 +33,7 @@ body{
     .project_item{
         grid-template-columns: 30vw 1fr;
         grid-template-rows: 1fr;
-        height: 200px;
+        height: 250px;
     }
     .project_description{
         grid-row: 1/2;
@@ -63,12 +63,13 @@ body{
 // small screen
 @media only screen and (max-width: 800px){  
     .project_item{
-        grid-template-columns: 1fr;
-        grid-template-rows: 30vh 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgCont{
+        width: 100%;
     }
     .project_description{
-        grid-row: 2/3;
-        grid-column: 1/2;
         width: 80vw;
     }
     .blog_info{
