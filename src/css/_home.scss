@@ -60,3 +60,10 @@ h1{
         grid-column: 2/3;
     }
 }
+.title_video{
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 80vh;
+    z-index: -1;
+}

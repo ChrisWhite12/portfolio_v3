@@ -1,12 +1,15 @@
 import React from 'react'
 
 const Home = () => {
-    const img_style = {
-        backgroundImage: "linear-gradient(rgba(6, 3, 26, 0.5), rgba(6, 3, 26, 0.7)), url('./circuit-unsplash.jpg')"
-    }
-
+    // const img_style = {
+    //     backgroundImage: "linear-gradient(rgba(6, 3, 26, 0.5), rgba(6, 3, 26, 0.7)), url('./circuit-unsplash.jpg')"
+    // }
+    // style={img_style}
     return (
-        <div className="main_sec main_img" style={img_style}>
+    <div className="main_sec main_img" >
+        <video autoPlay loop muted className="title_video">
+            <source src={'video/trailer.mp4'} type='video/mp4' />
+        </video>
         <div className="text_grid">
                 <h1 className = 'letter_C1'>C</h1>
                 <h1 className = 'letter_H1'>H</h1>
