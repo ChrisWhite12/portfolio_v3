@@ -57,9 +57,17 @@ const Projects = () => {
             "livesite": "https://expo.io/@chrisw12/Habit-Squares",
             "video": "https://www.youtube.com/embed/1u6hRNbXxNE"
         
+        },
+        "project7": {
+            "title": "Jupiter React-three-fiber test",
+            "desc": "Short Project - spent a day learning and coding this app",
+            "skills": ["react", "js", "css"],
+            "img": "./project_img/jupiter.png",
+            "github": "https://github.com/ChrisWhite12/JupiterThreeJs",
+            "livesite": "https://cw12jupiter.netlify.app/",
+            "video": "https://www.youtube.com/embed/hAfUOhWG6f0"
         }
     }
-
     const handleVideoClick = (data) => {
         setModalOn(true)
         console.log('data',data);
@@ -92,6 +100,7 @@ const Projects = () => {
                     <div className="project_list">
                         <Project data={data["project6"]} handleVideoClick={handleVideoClick}/>
                         <Project data={data["project4"]} handleVideoClick={handleVideoClick}/>
+                        <Project data={data["project7"]} handleVideoClick={handleVideoClick} />
                         <Project data={data["project5"]} />
                         <Project data={data["project2"]} />
                         <Project data={data["project1"]} />

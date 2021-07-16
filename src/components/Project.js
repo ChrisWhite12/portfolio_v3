@@ -27,8 +27,8 @@ const Project = (props) => {
                 <h2 className="project_title">{props.data["title"]}</h2>
                 <p className="project_text">{props.data["desc"]}</p>
                 <div className="project_links">
-                    {props.data["github"] ? <a className='github_link' href={props.data["github"]}>GitHub</a> : <p className='github_link'></p>}
-                    {(props.data["livesite"]) ? <a className='site_link' href={props.data["livesite"]}>Live Site</a>: <p className='site_link'></p>}
+                    {props.data["github"] ? <a target='_blank' rel='noreferrer' className='github_link' href={props.data["github"]}>GitHub</a> : <p className='github_link'></p>}
+                    {(props.data["livesite"]) ? <a target='_blank' rel='noreferrer' className='site_link' href={props.data["livesite"]}>Live Site</a>: <p className='site_link'></p>}
                     {props.data['video'] ? <div className="video_btn" onClick={() => props.handleVideoClick(props.data['video'])}>Video</div>: <p className="video_btn"></p>}
                 </div>
             </div>
